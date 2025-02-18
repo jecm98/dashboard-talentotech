@@ -24,6 +24,10 @@ print(df['Energy_Type'].value_counts())
 
 import streamlit as st
 from vega_datasets import data
+numerical_cols = [
+    "Production_MWh", "Consumption_MWh", "Renewable_Percentage",
+    "CO2_Emissions", "Investment_MillionUSD", "Energy_Cost_USD_per_kWh", "Energy_Loss_Percentage"
+]
 df_numeric = df.select_dtypes(include=['number'])
 df_numeric = df[numerical_cols]
 source = data.barley()
