@@ -19,13 +19,7 @@ st.title("_Streamlit_ is :blue[cool] :sunglasses:")
 
 df = pd.read_csv("energy_sector_data_colombia.csv")
 df
-# Grafico de lineas
-# Carga de datos (usando tus datos o datos de ejemplo)
-except FileNotFoundError:
-    # Datos de ejemplo si no se encuentra el archivo
-    chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
-    st.warning("Archivo 'energy_sector_data_colombia.csv' no encontrado. Se usan datos de ejemplo.")
-    df = chart_data  # Asigna los datos de ejemplo a df
+
 
 # Gráfico de líneas con Plotly
 fig = px.line(df, 
