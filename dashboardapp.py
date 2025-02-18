@@ -25,7 +25,7 @@ energy_counts.columns = ['Energy_Type', 'Frecuencia']
 fig = px.bar(energy_counts, 
              x='Energy_Type', 
              y='Frecuencia',
-             title='Frecuencia de Energy_Type',
+             title='Cantidad de Typos de Energía',
              labels={'Frecuencia': 'Frecuencia'},
              color='Energy_Type')  # Colores para cada barra
 
@@ -47,7 +47,7 @@ energy_counts.columns = ['Region', 'Frecuencia']
 fig = px.bar(energy_counts, 
              x='Region', 
              y='Frecuencia',
-             title='Frecuencia de Region',
+             title='Cantidad de Regiones',
              labels={'Frecuencia': 'Frecuencia'},
              color='Region')  # Colores para cada barra
 
