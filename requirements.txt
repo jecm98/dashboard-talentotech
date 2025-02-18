@@ -6,3 +6,4 @@ pandas
 seaborn
 streamlit
 vega_datasets
+data
