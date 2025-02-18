@@ -21,10 +21,6 @@ df = pd.read_csv("energy_sector_data_colombia.csv")
 df
 # Grafico de lineas
 # Carga de datos (usando tus datos o datos de ejemplo)
-try:
-    df = pd.read_csv("energy_sector_data_colombia.csv")
-    # Si deseas usar una columna específica como eje x, descomenta la siguiente línea y ajusta el nombre de la columna:
-    # df = df.set_index('Nombre_de_la_columna_x') 
 except FileNotFoundError:
     # Datos de ejemplo si no se encuentra el archivo
     chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
