@@ -12,6 +12,7 @@ st.title("_Streamlit_ is :blue[cool] :sunglasses:")
 
 df = pd.read_csv("energy_sector_data_colombia.csv")
 df
-df.describe()
+
+print(df.describe())
 
 print(df['Energy_Type'].value_counts())
