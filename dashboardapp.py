@@ -30,6 +30,6 @@ numerical_cols = [
 ]
 df_numeric = df.select_dtypes(include=['number'])
 df_numeric = df[numerical_cols]
-source = data.barley()
+source = df()
 
 st.bar_chart(source, x="Production_MWh", y="Consumption_MWh", color="site", stack=False)
