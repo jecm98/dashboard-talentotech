@@ -26,6 +26,6 @@ import streamlit as st
 from vega_datasets import data
 df_numeric = df.select_dtypes(include=['number'])
 df_numeric = df[numerical_cols]
-source = data.barley(df_numeric)
+source = data.barley()
 
 st.bar_chart(source, x="year", y="yield", color="site", stack=False)
