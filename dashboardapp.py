@@ -1,4 +1,4 @@
-pip install vega_datasets
+
 
 import pandas as pd # manejos de tablas
 import numpy as np # calculos numericos
@@ -21,6 +21,7 @@ print(df.describe())
 print(df['Energy_Type'].value_counts())
 
 # Grafico Barras
+pip install vega_datasets
 import streamlit as st
 from vega_datasets import data
 
