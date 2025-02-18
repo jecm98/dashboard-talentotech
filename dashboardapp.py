@@ -19,7 +19,9 @@ print(df['Energy_Type'].value_counts())
 
 # Grafico Barras
 
-# from vega_datasets import data
-source = df.barley()
-st.bar_chart(source, x="Energy_Type", y="Frecuencia", color="site", stack=False)
 
+from df import data
+
+source = data.barley()
+
+st.bar_chart(source, x="Energy_Type", y="Frecuencia", color="site", stack=False)
