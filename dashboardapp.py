@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt # constr. de graficos
 import seaborn as sns # libreria de graficos
 import scipy as sp # calculos complejos
 import streamlit as st
+import plotly.express as px
 
 
 
