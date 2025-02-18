@@ -10,12 +10,25 @@ import plotly.express as px
 
 
 
+chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
+
+st.line_chart(chart_data)
+
+
+# _________________________________
 
 st.title("Tabla Informativa")
 st.title("_Streamlit_ is :blue[cool] :sunglasses:")
 
 df = pd.read_csv("energy_sector_data_colombia.csv")
 df
+
+chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
+st.line_chart(chart_data)
+
+
+
+
 
 # Cálculo de frecuencias
 energy_counts = df['Energy_Type'].value_counts().reset_index()
