@@ -14,5 +14,11 @@ st.title("Tabla Informativa")
 st.title("_Streamlit_ is :blue[cool] :sunglasses:")
 
 df = pd.read_csv("energy_sector_data_colombia.csv")
-df
+# Grafico Barras
+df['Energy_Type'].value_counts().plot(kind='bar')
+plt.title('Frecuencia de Energy_Type')
+plt.xlabel('Energy_Type')
+plt.ylabel('Frecuencia')
+plt.grid()
+plt.show()
 
