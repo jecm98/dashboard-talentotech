@@ -23,8 +23,8 @@ print(df['Energy_Type'].value_counts())
 # Grafico Barras
 
 import streamlit as st
-from vega_datasets import data
+from vega_datasets import df
 
-source = data.barley()
+source = df.barley()
 
 st.bar_chart(source, x="year", y="yield", color="site", stack=False)
