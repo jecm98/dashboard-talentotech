@@ -14,11 +14,24 @@ st.title("Tabla Informativa")
 st.title("_Streamlit_ is :blue[cool] :sunglasses:")
 
 df = pd.read_csv("energy_sector_data_colombia.csv")
-# Grafico Barras
-df['Energy_Type'].value_counts().plot(kind='bar')
-plt.title('Frecuencia de Energy_Type')
-plt.xlabel('Energy_Type')
-plt.ylabel('Frecuencia')
-plt.grid()
-plt.show()
 
+# Cálculo de frecuencias
+energy_counts = df['Energy_Type'].value_counts().reset_index()
+energy_counts.columns = ['Energy_Type', 'Frecuencia']
+
+# Creación del gráfico con Plotly
+fig = px.bar(energy_counts, 
+             x='Energy_Type', 
+             y='Frecuencia',
+             title='Frecuencia de Energy_Type',
+             labels={'Frecuencia': 'Frecuencia'},
+             color='Energy_Type')  # Colores para cada barra
+
+# Personalización del gráfico (opcional)
+fig.update_layout(xaxis_title='Energy_Type', 
+                  yaxis_title='Frecuencia',
+                  plot_bgcolor='white',  # Fondo blanco
+                  font=dict(color='black'))  # Texto negro
+
+# Mostrar el gráfico en Streamlit
+st.plotly_chart(fig)
