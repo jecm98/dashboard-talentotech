@@ -15,7 +15,7 @@ st.title("Tabla Informativa")
 st.title("_Streamlit_ is :blue[cool] :sunglasses:")
 
 df = pd.read_csv("energy_sector_data_colombia.csv")
-
+df
 # Cálculo de frecuencias
 energy_counts = df['Energy_Type'].value_counts().reset_index()
 energy_counts.columns = ['Energy_Type', 'Frecuencia']
